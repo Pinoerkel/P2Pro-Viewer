@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["P2Pro"]
+
+[project]
+name = "P2Pro"
+version = "0.1.0"
+authors = [
+]
+description = ""
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: LZH License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "ffmpeg",
+  "keyboard",
+  "opencv-python",
+  # pyaudio  # needs compilation, so using system package is easier, e.g. python3-pyaudio for debian
+  "pyudev",
+  "pyusb",
+]
+
+[project.urls]
+"Homepage" = "http://github.com/hoba87/P2Pro-Viewer.git"
+"Bug Tracker" = "http://github.com/hoba87/P2Pro-Viewer/-/issues"
+
+[tool.black]
+line-length=100
+target-version=['py37','py38','py39','py310','py311']
